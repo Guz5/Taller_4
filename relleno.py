@@ -1,5 +1,7 @@
-# Usando funciones de "relleno" de arreglos
+#Importar la biblioteca
 import numpy as np
+
+# Usando funciones de "relleno" de arreglos
 
 miArreglo = np.zeros ((4,5))
 

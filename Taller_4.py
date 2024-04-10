@@ -1,29 +1,26 @@
-
-
+#Importar la biblioteca
 import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
-# Generar datos para el tornado
-theta = np.linspace(0, 10*np.pi, 1000)
-z = np.linspace(-2, 2, 1000)
-theta, z = np.meshgrid(theta, z)
-x = z * np.sin(theta)
-y = z * np.cos(theta)
+#un metodo de crear arreglos ndarray es usando una lista normalita
 
-# Crear la figura y los ejes 3D
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
+miLista = [3,5,7,9]
 
-# Graficar el tornado
-ax.plot_surface(x, y, z, cmap='coolwarm')
+miArreglo = np.array(miLista)
 
-# Etiquetas de los ejes y título
-ax.set_xlabel('Eje X')
-ax.set_ylabel('Eje Y')
-ax.set_zlabel('Eje Z')
-ax.set_title('Tornado en 3D')
+#Dimensiones eje
+print ("Dimensiones:", miArreglo.ndim)
 
-# Mostrar el gráfico
-plt.show()
+#Dimensiones eje y longitud
+print ("Eje y Longitud:", miArreglo.shape)
 
+#Elementos
+print ("Elementos:", miArreglo.size)
+
+#Tipos de elementos
+print ("Tipos de elementos:", miArreglo.dtype)
+
+
+
+miArreglo2 = np.array([3,5,8,14])
+
+print (miArreglo2)

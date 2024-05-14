@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #mensaje {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function verificarContrasena() {
+            var contrasenaIngresada = document.getElementById("contrasena").value;
+            if (contrasenaIngresada.toLowerCase() === "sandy") {
+                document.getElementById("formulario").style.display = "none";
+                document.getElementById("mensaje").style.display = "block";
+            } else {
+                alert("Contraseña incorrecta. Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="formulario">
+        <h1>Nombre de tu hija</h1>
+        <input type="password" id="contrasena" placeholder="Contraseña">
+        <br><br>
+        <button onclick="verificarContrasena()">Desbloquear</button>
+    </div>
+    <div id="mensaje">
+        <h1>¡Estás invitada!</h1>
+        <p>Estás invitada a una cita especial el 14 de mayo del 2024 a las 4 PM. TE AMO</p>
+    </div>
+</body>
+</html>
